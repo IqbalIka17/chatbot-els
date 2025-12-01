@@ -9,33 +9,39 @@ def apply_chat_css():
     st.markdown("""
     <style>
 
-    /* ====== USER MESSAGE KE KANAN ====== */
-    div[data-testid="chat-message-user"] {
-        display: flex !important;
-        flex-direction: row-reverse !important;
-        justify-content: flex-end !important;
-        align-items: flex-start !important;
+    body {
+        background-color: #ffffff;
     }
 
-    /* Avatar user pindah kanan */
-    div[data-testid="chat-message-user"] img {
-        margin-left: 10px !important;
-        margin-right: 0 !important;
+    .chat-container {
+        max-width: 600px;
+        margin: auto;
     }
 
-    /* Bubble user ke kanan */
-    div[data-testid="chat-message-user"] div[data-testid="chat-message-content"] {
-        background-color: #2a2a2a !important;
-        color: white !important;
-        border-radius: 12px !important;
-        padding: 10px 14px !important;
-        max-width: 80% !important;
-        text-align: right !important;
+    .user-bubble {
+        background-color: #007AFF;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 18px;
+        margin: 8px;
+        max-width: 80%;
+        text-align: right;
+        margin-left: auto;
+        font-size: 16px;
+        line-height: 1.4;
     }
 
-    /* Teks rata kanan */
-    div[data-testid="chat-message-user"] div[data-testid="chat-message-content"] p {
-        text-align: right !important;
+    .bot-bubble {
+        background-color: #E5E5EA;
+        color: black;
+        padding: 12px 16px;
+        border-radius: 18px;
+        margin: 8px;
+        max-width: 80%;
+        text-align: left;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 1.4;
     }
 
     </style>
