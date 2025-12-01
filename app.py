@@ -3,6 +3,43 @@ import google.generativeai as genai
 import os
 
 # --------------------------
+# CSS Messages
+# --------------------------
+def apply_chat_css():
+    st.markdown("""
+    <style>
+
+    /* ================================
+        USER MESSAGE - MOVE TO RIGHT
+    =================================*/
+    .stChatMessage.user {
+        flex-direction: row-reverse !important;
+    }
+
+    /* USER AVATAR to the right */
+    .stChatMessage.user img {
+        margin-left: 10px !important;
+        margin-right: 0 !important;
+    }
+
+    /* Bubble user ke kanan + warna */
+    .stChatMessage.user .stMarkdown {
+        text-align: right !important;
+        background: #2a2a2a !important;
+        border-radius: 12px !important;
+        padding: 10px 14px !important;
+    }
+
+    /* Fix bubble width */
+    .stChatMessage.user .stMarkdown p {
+        text-align: right !important;
+    }
+
+    </style>
+    """, unsafe_allow_html=True)
+
+
+# --------------------------
 # Load Store Info
 # --------------------------
 def load_store_data_txt(file_path="store_data.txt"):
@@ -61,6 +98,8 @@ def main():
         page_icon="💻",
         layout="centered",
     )
+
+    apply_chat_css()
 
     st.title("🖥️ ELSBOT - Customer Service Laptop ASUS Semarang")
     st.write("Selamat datang! Saya siap membantu Anda 😊")
