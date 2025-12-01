@@ -47,43 +47,57 @@ st.markdown("""
 .chat-container {
     max-width: 700px;
     margin: auto;
+    padding-bottom: 80px;
 }
 
 .user-row, .bot-row {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
+    align-items: flex-end;
+    margin-bottom: 14px;
 }
 
 .user-icon, .bot-icon {
-    font-size: 28px;
-    margin: 6px;
+    font-size: 30px;
+    margin: 0 10px;
 }
 
 .user-bubble {
     background-color: #007AFF;
     color: white;
-    padding: 12px 16px;
-    border-radius: 18px;
-    max-width: 75%;
+    padding: 12px 18px;
+    border-radius: 18px 18px 4px 18px;
+    max-width: 70%;
     margin-left: auto;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .bot-bubble {
-    background-color: #E5E5EA;
-    color: black;
-    padding: 12px 16px;
-    border-radius: 18px;
-    max-width: 75%;
+    background-color: #F1F0F5;
+    color: #000;
+    padding: 12px 18px;
+    border-radius: 18px 18px 18px 4px;
+    max-width: 70%;
     margin-right: auto;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+/* Avatar lebih rapi seperti WhatsApp */
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
 }
 
 </style>
 """, unsafe_allow_html=True)
+
 
 # =======================================================
 # 5. Fungsi Chat
@@ -107,7 +121,11 @@ st.write("Selamat datang! Silakan tanya tentang produk 😊")
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
 
 # =======================================================
-# 8. Tampilkan history chat
+# 8. RENDERING CHAT
+# =======================================================
+
+# =======================================================
+# 9. Tampilkan history chat
 # =======================================================
 for chat in st.session_state.history:
     if chat["role"] == "user":
@@ -132,7 +150,7 @@ for chat in st.session_state.history:
         )
 
 # =======================================================
-# 9. Input chat
+# 10. Input chat
 # =======================================================
 user_input = st.chat_input("Ketik pesan Anda...")
 
