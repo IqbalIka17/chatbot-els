@@ -147,7 +147,7 @@ def main():
                 f"""
                 <div class="user-row">
                     <div class="user-bubble">{chat['msg']}</div>
-                    <div class="user-avatar">👤</div>
+                    <div class="user-avatar">😊</div>
                 </div>
                 """,
                 unsafe_allow_html=True
