@@ -9,34 +9,38 @@ def apply_chat_css():
     st.markdown("""
     <style>
 
-    /* ================================
-        USER MESSAGE - MOVE TO RIGHT
-    =================================*/
-    .stChatMessage.user {
+    /* ====== USER MESSAGE KE KANAN ====== */
+    div[data-testid="chat-message-user"] {
+        display: flex !important;
         flex-direction: row-reverse !important;
+        justify-content: flex-end !important;
+        align-items: flex-start !important;
     }
 
-    /* USER AVATAR to the right */
-    .stChatMessage.user img {
+    /* Avatar user pindah kanan */
+    div[data-testid="chat-message-user"] img {
         margin-left: 10px !important;
         margin-right: 0 !important;
     }
 
-    /* Bubble user ke kanan + warna */
-    .stChatMessage.user .stMarkdown {
-        text-align: right !important;
-        background: #2a2a2a !important;
+    /* Bubble user ke kanan */
+    div[data-testid="chat-message-user"] div[data-testid="chat-message-content"] {
+        background-color: #2a2a2a !important;
+        color: white !important;
         border-radius: 12px !important;
         padding: 10px 14px !important;
+        max-width: 80% !important;
+        text-align: right !important;
     }
 
-    /* Fix bubble width */
-    .stChatMessage.user .stMarkdown p {
+    /* Teks rata kanan */
+    div[data-testid="chat-message-user"] div[data-testid="chat-message-content"] p {
         text-align: right !important;
     }
 
     </style>
     """, unsafe_allow_html=True)
+
 
 
 # --------------------------
