@@ -96,10 +96,10 @@ def initialize_gemini():
 
     Aturan Respon:
     - Jawab dengan ramah dan profesional.
-    - Berikan produk yang ada pada katalog.
-    - Jika ditanya harga: berikan harga yang tertera.
-    - Jika ditanya stok: jawab stok biasanya tersedia tetapi harus dicek.
-    - Jangan gunakan markdown atau simbol bintang.
+    - Berikan produk yang ada di daftar katalog saja.
+    - Jika ditanya harga: berikan harga tertera.
+    - Jika ditanya stok: jawab bahwa stok biasanya tersedia, tapi harus dicek.
+    - Selalu tawarkan bantuan di akhir chat.
     """
 
     return genai.GenerativeModel(
