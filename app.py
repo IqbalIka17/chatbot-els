@@ -129,7 +129,7 @@ def main():
     if user_input:
         # Add user message
         st.session_state.messages.append({"role": "user", "content": user_input})
-        st.chat_message("user").write(user_input)
+        st.chat_message("user", avatar="🧑").write(user_input)
 
         # Generate reply
         reply = chat_with_gemini(st.session_state.model, user_input)
