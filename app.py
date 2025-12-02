@@ -114,7 +114,7 @@ def main():
 
     st.set_page_config(page_title="ELSBOT Chatbot", page_icon="💻")
 
-    st.title("🖥️ ELSBOT - Customer Service Laptop ASUS Semarang")
+    st.title("🖥️ ELS Chatbot")
     st.write("Halo! Ada yang bisa saya bantu? 😊")
 
     # Load model sekali
