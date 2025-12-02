@@ -33,22 +33,12 @@ st.markdown("""
     margin-right: 8px;
 }
 
-.user-avatar {
-    font-size: 30px;
-    margin-left: 5px;
-}
-
 /* BOT MESSAGE (KIRI) */
 .bot-row {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     margin: 12px 0;
-}
-
-.bot-avatar {
-    font-size: 30px;
-    margin-right: 5px;
 }
 
 .bot-bubble {
@@ -148,7 +138,6 @@ def main():
                 f"""
                 <div class="user-row">
                     <div class="user-bubble">{chat['msg']}</div>
-                    <div class="user-avatar">😊</div>
                 </div>
                 """,
                 unsafe_allow_html=True
@@ -157,7 +146,6 @@ def main():
             st.markdown(
                 f"""
                 <div class="bot-row">
-                    <div class="bot-avatar">🤖</div>
                     <div class="bot-bubble">{chat['msg']}</div>
                 </div>
                 """,
